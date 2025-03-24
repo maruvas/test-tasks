@@ -55,7 +55,7 @@ describe('Testing actions with records in the table "Адреса прожива
     
     // selecting parameter 'Общая площадь'
     cy.get('[data-cy="stack-select-dialog"]').within(() => {
-      cy.contains('div', 'Общая площадь').parents('tr').within($tr => {
+      cy.contains('div', 'Общая площадь').parents('tr').within(() => {
         cy.get('[data-cy="checkbox"]').click({force: true})
       })
       cy.wait(1000) // waiting 1s for the parameter add form to be displayed
